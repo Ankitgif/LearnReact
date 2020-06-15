@@ -19,6 +19,20 @@ class LifecycleC extends Component {
     componentDidMount() {
         console.log('LifecycleC componentDidMount')
     }
+
+    shouldComponentUpdate() {
+        console.log('LifecycleC shouldComponentUpdate')
+        return true
+    }
+
+    getSnapshotBeforeUpdate(prevProps, prevState) {
+        console.log('LifecycleC getSnapshotBeforeUpdate')
+        return null
+    }
+
+    componentDidUpdate() {
+        console.log('LifecycleC componentDidUpdate')
+    }
     render() {
         console.log('LifecycleC render')
         return (
